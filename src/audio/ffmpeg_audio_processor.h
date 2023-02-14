@@ -9,7 +9,7 @@
 #endif
 
 #if defined(USE_SWRESAMPLE)
-#include "audio/ffmpeg_audio_processor_swresample.h"
+#include "ffmpeg_audio_processor_swresample.h"
 #else
 #error "no audio processing library"
 #endif
