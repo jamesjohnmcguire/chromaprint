@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\CMakeFiles\7b3980d488dd8978ab54bad6f79ba876\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FEC5E13B-CDDF-32F9-BBE1-B3BBC6E597D5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
