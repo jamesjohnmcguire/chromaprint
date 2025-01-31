@@ -22,10 +22,7 @@ libchromaprint.pc
 install_manifest.txt
 tools/spectrogram
 src/libchromaprint.so.*
-*.vcxproj
-*.vcxproj.*
 *.dir
-*.sln
 *.suo
 Debug
 src/Debug
@@ -35,7 +32,6 @@ src/Debug
 *.dll.manifest
 *.exp
 *.dylib
-*.vcproj
 *.user
 *.ncb
 src/Release
