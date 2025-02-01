@@ -1,77 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint.cpp">
+    <ClCompile Include="chromaprint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint.h">
+    <ClInclude Include="chromaprint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\CMakeLists.txt" />
+    <CustomBuild Include="CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\resample2.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\resample2.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fft_lib_kissfft.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fft_lib_kissfft.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\audio_processor.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\audio_processor.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\chroma.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\chroma.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\chroma_resampler.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\chroma_resampler.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\chroma_filter.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\chroma_filter.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\spectrum.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\spectrum.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fft.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fft.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprinter.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprinter.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\image_builder.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\image_builder.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\simhash.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\simhash.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\silence_remover.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\silence_remover.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprint_calculator.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprint_calculator.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprint_compressor.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprint_compressor.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprint_decompressor.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprint_decompressor.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprinter_configuration.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprinter_configuration.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprint_matcher.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprint_matcher.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\base64.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\base64.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\kiss_fft.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\kiss_fft.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\kiss_fftr.obj">
+    <Object Include="chromaprint_objs.dir\$(Configuration)\kiss_fftr.obj">
       <Filter>Object Libraries</Filter>
     </Object>
   </ItemGroup>

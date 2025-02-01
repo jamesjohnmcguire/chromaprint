@@ -142,7 +142,7 @@
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</ProjectReference>
-		</ItemGroup>
+	</ItemGroup>
 
-		<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
