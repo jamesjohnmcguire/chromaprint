@@ -50,7 +50,7 @@
 
 	<ItemDefinitionGroup>
 		<ClCompile>
-			<AdditionalIncludeDirectories>3rdparty\kissfft;3rdparty\kissfft\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>..;3rdparty\kissfft;3rdparty\kissfft\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 			<AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
 			<ExceptionHandling>Sync</ExceptionHandling>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
@@ -76,7 +76,6 @@
 
 	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
 		<ClCompile>
-			<AdditionalIncludeDirectories>..;3rdparty\kissfft;3rdparty\kissfft\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
 			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
 			<InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
