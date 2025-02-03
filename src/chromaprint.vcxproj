@@ -55,7 +55,7 @@
 			<ExceptionHandling>Sync</ExceptionHandling>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
 			<PrecompiledHeader>NotUsing</PrecompiledHeader>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR="Debug";CHROMAPRINT_API_EXPORTS</PreprocessorDefinitions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CHROMAPRINT_API_EXPORTS</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<RuntimeTypeInfo>true</RuntimeTypeInfo>
 			<ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
