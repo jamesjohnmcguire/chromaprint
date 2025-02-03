@@ -1,95 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\avresample\resample2.c">
+    <ClCompile Include="avresample\resample2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fft_lib_kissfft.cpp">
+    <ClCompile Include="fft_lib_kissfft.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\audio_processor.cpp">
+    <ClCompile Include="audio_processor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chroma.cpp">
+    <ClCompile Include="chroma.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chroma_resampler.cpp">
+    <ClCompile Include="chroma_resampler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chroma_filter.cpp">
+    <ClCompile Include="chroma_filter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\spectrum.cpp">
+    <ClCompile Include="spectrum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fft.cpp">
+    <ClCompile Include="fft.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fingerprinter.cpp">
+    <ClCompile Include="fingerprinter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\image_builder.cpp">
+    <ClCompile Include="image_builder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\simhash.cpp">
+    <ClCompile Include="simhash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\silence_remover.cpp">
+    <ClCompile Include="silence_remover.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fingerprint_calculator.cpp">
+    <ClCompile Include="fingerprint_calculator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fingerprint_compressor.cpp">
+    <ClCompile Include="fingerprint_compressor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fingerprint_decompressor.cpp">
+    <ClCompile Include="fingerprint_decompressor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fingerprinter_configuration.cpp">
+    <ClCompile Include="fingerprinter_configuration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fingerprint_matcher.cpp">
+    <ClCompile Include="fingerprint_matcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\utils\base64.cpp">
+    <ClCompile Include="utils\base64.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\kissfft\kiss_fft.c">
+    <ClCompile Include="3rdparty\kissfft\kiss_fft.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\kissfft\tools\kiss_fftr.c">
+    <ClCompile Include="3rdparty\kissfft\tools\kiss_fftr.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\simhash.h">
+    <ClInclude Include="simhash.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fingerprint_matcher.h">
+    <ClInclude Include="fingerprint_matcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\utils\base64.h">
+    <ClInclude Include="utils\base64.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\utils\gradient.h">
+    <ClInclude Include="utils\gradient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\utils\gaussian_filter.h">
+    <ClInclude Include="utils\gaussian_filter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\utils\scope_exit.h">
+    <ClInclude Include="utils\scope_exit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\utils\rolling_integral_image.h">
+    <ClInclude Include="utils\rolling_integral_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\audio\audio_slicer.h">
+    <ClInclude Include="audio\audio_slicer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\CMakeLists.txt" />
+    <CustomBuild Include="CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

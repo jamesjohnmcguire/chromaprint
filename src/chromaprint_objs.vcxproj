@@ -22,15 +22,16 @@
 		<CodeAnalysisRules />
 		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
 		<ConfigurationType>StaticLibrary</ConfigurationType>
-		<IntDir>$(Configuration)\</IntDir>
+		<IntDir>chromaprint_objs.dir\$(Configuration)\</IntDir>
 		<Keyword>Win32Proj</Keyword>
 		<LinkIncremental>true</LinkIncremental>
-		<OutDir>$(SolutionDir)\Bin\$(Configuration)\$(Platform)\</OutDir>
+		<OutDir>chromaprint_objs.dir\$(Configuration)\</OutDir>
 		<PlatformToolset>v143</PlatformToolset>
 		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
 		<ProjectGuid>{E0425213-C05D-35BB-A44E-C1A5CD49F5B2}</ProjectGuid>
 		<ProjectName>chromaprint_objs</ProjectName>
-		<RootNamespace>TimeTrackerNativeLibrary</RootNamespace>
+		<TargetExt>.lib</TargetExt>
+		<TargetName>chromaprint_objs</TargetName>
 		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
 	</PropertyGroup>
 
@@ -40,50 +41,42 @@
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
 	</ImportGroup>
 
-	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+	<ItemDefinitionGroup>
 		<ClCompile>
 			<AdditionalIncludeDirectories>..;3rdparty\kissfft;3rdparty\kissfft\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 			<AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
 			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
 			<ExceptionHandling>Sync</ExceptionHandling>
-			<InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-			<Optimization>Disabled</Optimization>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
 			<PrecompiledHeader>NotUsing</PrecompiledHeader>
-			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS</PreprocessorDefinitions>
 			<RuntimeTypeInfo>true</RuntimeTypeInfo>
+			<ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
 			<UseFullPaths>false</UseFullPaths>
 			<WarningLevel>Level3</WarningLevel>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
-			<ObjectFileName>$(IntDir)</ObjectFileName>
-			<ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
 		</ClCompile>
 		<Lib>
 			<AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
 		</Lib>
 	</ItemDefinitionGroup>
 
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+			<Optimization>Disabled</Optimization>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+		</ClCompile>
+	</ItemDefinitionGroup>
+
 	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
 		<ClCompile>
-			<AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;3rdparty\kissfft;3rdparty\kissfft\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-			<AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-			<ExceptionHandling>Sync</ExceptionHandling>
 			<InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
 			<Optimization>MaxSpeed</Optimization>
-			<PrecompiledHeader>NotUsing</PrecompiledHeader>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-			<RuntimeTypeInfo>true</RuntimeTypeInfo>
-			<UseFullPaths>false</UseFullPaths>
-			<WarningLevel>Level3</WarningLevel>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
-			<ObjectFileName>$(IntDir)</ObjectFileName>
-			<DebugInformationFormat>
-			</DebugInformationFormat>
-			<ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
 		</ClCompile>
-		<Lib>
-			<AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-		</Lib>
 	</ItemDefinitionGroup>
 
 	<ItemGroup>
