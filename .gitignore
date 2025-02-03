@@ -4,7 +4,7 @@ Doxyfile
 Makefile
 cmake_install.cmake
 cmake_uninstall.cmake
-config.h
+# config.h
 tests/all_tests
 tests/CTestTestfile.cmake
 tools/fpgen
