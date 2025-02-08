@@ -27,6 +27,7 @@
 		<LinkIncremental>true</LinkIncremental>
 		<OutDir>$(SolutionDir)\Bin\$(Configuration)\$(Platform)\</OutDir>
 		<PlatformToolset>v143</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
 		<ProjectGuid>{28C68632-2402-3743-A94E-49A675B759AD}</ProjectGuid>
 		<ProjectName>chromaprint</ProjectName>
 		<RootNamespace>TimeTrackerNativeLibrary</RootNamespace>
@@ -67,6 +68,8 @@
 			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
 			<IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+			<ImportLibrary>$(Configuration)/chromaprint.lib</ImportLibrary>
+			<ProgramDataBaseFile>$(Configuration)/chromaprint.pdb</ProgramDataBaseFile>
 			<SubSystem>Console</SubSystem>
 		</Link>
 		<ProjectReference>
@@ -85,8 +88,6 @@
 		</ClCompile>
 		<Link>
 			<GenerateDebugInformation>true</GenerateDebugInformation>
-			<ImportLibrary>Debug/chromaprint.lib</ImportLibrary>
-			<ProgramDataBaseFile>Debug/chromaprint.pdb</ProgramDataBaseFile>
 		</Link>
 	</ItemDefinitionGroup>
 
@@ -99,8 +100,6 @@
 		</ClCompile>
 		<Link>
 			<GenerateDebugInformation>false</GenerateDebugInformation>
-			<ImportLibrary>Release/chromaprint.lib</ImportLibrary>
-			<ProgramDataBaseFile>Release/chromaprint.pdb</ProgramDataBaseFile>
 		</Link>
 	</ItemDefinitionGroup>
 

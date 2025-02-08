@@ -1,389 +1,191 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
-  </PropertyGroup>
-  <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="MinSizeRel|x64">
-      <Configuration>MinSizeRel</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="RelWithDebInfo|x64">
-      <Configuration>RelWithDebInfo</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-  </ItemGroup>
-  <PropertyGroup Label="Globals">
-    <ProjectGuid>{A02086B8-5EA7-3255-9A50-B0545ED4EA38}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
-    <Platform>x64</Platform>
-    <ProjectName>all_tests</ProjectName>
-    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <PropertyGroup Label="UserMacros" />
-  <PropertyGroup>
-    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">all_tests.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">all_tests</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">all_tests.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">all_tests</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">all_tests.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">all_tests</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">all_tests.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">all_tests</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-      <Optimization>Disabled</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>..\src\Debug\chromaprint.lib;Debug\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/Debug/all_tests.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/Debug/all_tests.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <Optimization>MaxSpeed</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
-      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>..\src\Release\chromaprint.lib;Release\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/Release/all_tests.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/Release/all_tests.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <Optimization>MinSpace</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
-      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>..\src\MinSizeRel\chromaprint.lib;MinSizeRel\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/MinSizeRel/all_tests.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/MinSizeRel/all_tests.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <Optimization>MaxSpeed</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>..\src\RelWithDebInfo\chromaprint.lib;RelWithDebInfo\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/RelWithDebInfo/all_tests.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/RelWithDebInfo/all_tests.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
-  <ItemGroup>
-    <CustomBuild Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\CMakeLists.txt">
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint -BC:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint --check-stamp-file C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindThreads.cmake;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\cmake\modules\FindGTest.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint -BC:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint --check-stamp-file C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindThreads.cmake;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\cmake\modules\FindGTest.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint -BC:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint --check-stamp-file C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindThreads.cmake;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\cmake\modules\FindGTest.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint -BC:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint --check-stamp-file C:/Users/JamesMc/Data/Clients/DigitalZenWorks/MusicMan2/SourceCode/ChromaPrint/tests/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindThreads.cmake;C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\cmake\modules\FindGTest.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\main.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_api.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_utils.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_quantizer.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_filter.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_filter_utils.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_audio_processor.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_simhash.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_chromaprint.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_chroma.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_chroma_filter.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_chroma_resampler.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_fingerprint_compressor.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_fingerprint_decompressor.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_fingerprint_matcher.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_silence_remover.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_moving_average.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_utils_gradient.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\test_utils_gaussian_filter.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\fft_test.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\audio\audio_slicer_test.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\utils\base64_test.cpp" />
-    <ClCompile Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\utils\rolling_integral_image_test.cpp" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\resample2.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fft_lib_kissfft.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\audio_processor.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\chroma.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\chroma_resampler.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\chroma_filter.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\spectrum.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fft.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprinter.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\image_builder.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\simhash.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\silence_remover.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprint_calculator.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprint_compressor.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprint_decompressor.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprinter_configuration.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\fingerprint_matcher.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\base64.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\kiss_fft.obj" />
-    <Object Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.dir\$(Configuration)\kiss_fftr.obj" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\ZERO_CHECK.vcxproj">
-      <Project>{0915496B-8989-3901-971A-963754173E0F}</Project>
-      <Name>ZERO_CHECK</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
-    <ProjectReference Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint.vcxproj">
-      <Project>{28C68632-2402-3743-A94E-49A675B759AD}</Project>
-      <Name>chromaprint</Name>
-    </ProjectReference>
-    <ProjectReference Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\src\chromaprint_objs.vcxproj">
-      <Project>{E0425213-C05D-35BB-A44E-C1A5CD49F5B2}</Project>
-      <Name>chromaprint_objs</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
-    <ProjectReference Include="C:\Users\JamesMc\Data\Clients\DigitalZenWorks\MusicMan2\SourceCode\ChromaPrint\tests\gtest.vcxproj">
-      <Project>{12FB1DB9-DE40-34AB-8CBA-0884BB37B516}</Project>
-      <Name>gtest</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+<Project
+	DefaultTargets="Build"
+	ToolsVersion="17.0"
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+	<PropertyGroup>
+		<CharacterSet>MultiByte</CharacterSet>
+		<CodeAnalysisRules />
+		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+		<ConfigurationType>Application</ConfigurationType>
+		<GenerateManifest>true</GenerateManifest>
+		<IntDir>all_tests.dir\$(Configuration)\</IntDir>
+		<Keyword>Win32Proj</Keyword>
+		<LinkIncremental>true</LinkIncremental>
+		<OutDir>$(Configuration)\</OutDir>
+		<PlatformToolset>v143</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<ProjectGuid>{A02086B8-5EA7-3255-9A50-B0545ED4EA38}</ProjectGuid>
+		<ProjectName>all_tests</ProjectName>
+		<RootNamespace>TimeTrackerNativeLibrary</RootNamespace>
+		<TargetName>all_tests</TargetName>
+		<TargetExt>.exe</TargetExt>
+		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+		<LinkIncremental>true</LinkIncremental>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+	<ImportGroup Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>..;..\src;.;..\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+			<ExceptionHandling>Sync</ExceptionHandling>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS"</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<RuntimeTypeInfo>true</RuntimeTypeInfo>
+			<ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+			<UseFullPaths>false</UseFullPaths>
+			<WarningLevel>Level3</WarningLevel>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\src;.;..\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Link>
+			<AdditionalDependencies>..\src\$(Configuration)\chromaprint.lib;$(Configuration)\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+			<IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+			<ImportLibrary>$(Configuration)/all_tests.lib</ImportLibrary>
+			<ProgramDataBaseFile>$(Configuration)/all_tests.pdb</ProgramDataBaseFile>
+			<SubSystem>Console</SubSystem>
+		</Link>
+		<ProjectReference>
+			<ImportLibrary>(Configuration)/chromaprint.lib</ImportLibrary>
+			<LinkLibraryDependencies>false</LinkLibraryDependencies>
+			<ProgramDataBaseFile>(Configuration)/chromaprint.pdb</ProgramDataBaseFile>
+		</ProjectReference>
+	</ItemDefinitionGroup>
+
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+			<InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+			<Optimization>Disabled</Optimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+		</ResourceCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+			<Optimization>MaxSpeed</Optimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+		</ResourceCompile>
+		<Link>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+
+	<ItemGroup>
+		<ClCompile Include="main.cpp" />
+		<ClCompile Include="test_api.cpp" />
+		<ClCompile Include="test_utils.cpp" />
+		<ClCompile Include="test_quantizer.cpp" />
+		<ClCompile Include="test_filter.cpp" />
+		<ClCompile Include="test_filter_utils.cpp" />
+		<ClCompile Include="test_audio_processor.cpp" />
+		<ClCompile Include="test_simhash.cpp" />
+		<ClCompile Include="test_chromaprint.cpp" />
+		<ClCompile Include="test_chroma.cpp" />
+		<ClCompile Include="test_chroma_filter.cpp" />
+		<ClCompile Include="test_chroma_resampler.cpp" />
+		<ClCompile Include="test_fingerprint_compressor.cpp" />
+		<ClCompile Include="test_fingerprint_decompressor.cpp" />
+		<ClCompile Include="test_fingerprint_matcher.cpp" />
+		<ClCompile Include="test_silence_remover.cpp" />
+		<ClCompile Include="test_moving_average.cpp" />
+		<ClCompile Include="test_utils_gradient.cpp" />
+		<ClCompile Include="test_utils_gaussian_filter.cpp" />
+		<ClCompile Include="..\src\fft_test.cpp" />
+		<ClCompile Include="..\src\audio\audio_slicer_test.cpp" />
+		<ClCompile Include="..\src\utils\base64_test.cpp" />
+		<ClCompile Include="..\src\utils\rolling_integral_image_test.cpp" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\resample2.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fft_lib_kissfft.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\audio_processor.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\chroma.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\chroma_resampler.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\chroma_filter.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\spectrum.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fft.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprinter.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\image_builder.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\simhash.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\silence_remover.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprint_calculator.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprint_compressor.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprint_decompressor.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprinter_configuration.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprint_matcher.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\base64.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\kiss_fft.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\kiss_fftr.obj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ZERO_CHECK.vcxproj">
+			<Project>{0915496B-8989-3901-971A-963754173E0F}</Project>
+			<Name>ZERO_CHECK</Name>
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</ProjectReference>
+		<ProjectReference Include="..\src\chromaprint.vcxproj">
+			<Project>{28C68632-2402-3743-A94E-49A675B759AD}</Project>
+			<Name>chromaprint</Name>
+		</ProjectReference>
+		<ProjectReference Include="..\src\chromaprint_objs.vcxproj">
+			<Project>{E0425213-C05D-35BB-A44E-C1A5CD49F5B2}</Project>
+			<Name>chromaprint_objs</Name>
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</ProjectReference>
+		<ProjectReference Include="gtest.vcxproj">
+			<Project>{12FB1DB9-DE40-34AB-8CBA-0884BB37B516}</Project>
+			<Name>gtest</Name>
+		</ProjectReference>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+
 </Project>
