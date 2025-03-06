@@ -31,7 +31,6 @@
 		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
 		<ProjectGuid>{A02086B8-5EA7-3255-9A50-B0545ED4EA38}</ProjectGuid>
 		<ProjectName>all_tests</ProjectName>
-		<RootNamespace>TimeTrackerNativeLibrary</RootNamespace>
 		<TargetName>all_tests</TargetName>
 		<TargetExt>.exe</TargetExt>
 		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -40,7 +39,6 @@
 	<PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
 		<LinkIncremental>true</LinkIncremental>
 	</PropertyGroup>
-
 
 	<PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
 		<LinkIncremental>false</LinkIncremental>
