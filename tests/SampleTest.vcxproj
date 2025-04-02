@@ -74,7 +74,7 @@
 		<ClCompile Include="pch.cpp">
 			<PrecompiledHeader>Create</PrecompiledHeader>
 		</ClCompile>
-		<ClCompile Include="test.cpp" />
+		<ClCompile Include="SanityCheckTests.cpp" />
 		<ClCompile Include="test_api.cpp">
 			<PrecompiledHeader>NotUsing</PrecompiledHeader>
 		</ClCompile>
