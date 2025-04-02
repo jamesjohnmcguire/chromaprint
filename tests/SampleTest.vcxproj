@@ -19,38 +19,31 @@
 
 	<PropertyGroup>
 		<CharacterSet>MultiByte</CharacterSet>
-		<CodeAnalysisRules />
-		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
 		<ConfigurationType>Application</ConfigurationType>
-		<GenerateManifest>true</GenerateManifest>
-		<IntDir>all_tests.dir\$(Configuration)\</IntDir>
 		<Keyword>Win32Proj</Keyword>
-		<LinkIncremental>true</LinkIncremental>
-		<OutDir>$(Configuration)\</OutDir>
+		<OutDir>$(SolutionDir)\Bin\$(Configuration)\$(Platform)\</OutDir>
 		<PlatformToolset>v143</PlatformToolset>
 		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
 		<ProjectGuid>{e6c35ff8-0236-450e-acd2-581adf0c3eca}</ProjectGuid>
 		<ProjectName>ChromaPrint Tests</ProjectName>
-		<TargetName>ChromaPrint Tests</TargetName>
-		<TargetExt>.exe</TargetExt>
+		<TargetName>ChromaPrintTests</TargetName>
 		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
-		<LinkIncremental>true</LinkIncremental>
 	</PropertyGroup>
 
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 
 	<ItemDefinitionGroup>
 		<ClCompile>
+			<AdditionalIncludeDirectories>..;..\src;.;..\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
 			<PrecompiledHeader>Use</PrecompiledHeader>
 			<PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-			<PreprocessorDefinitions>X64;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PreprocessorDefinitions>X64;_CONSOLE;HAVE_CONFIG_H;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<WarningLevel>Level3</WarningLevel>
 		</ClCompile>
 		<Link>
+			<AdditionalDependencies>..\src\$(Configuration)\chromaprint.lib;$(Configuration)\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
 			<SubSystem>Console</SubSystem>
 		</Link>
 	</ItemDefinitionGroup>
@@ -59,17 +52,14 @@
 		<ClCompile>
 			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
 			<Optimization>Disabled</Optimization>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG</PreprocessorDefinitions>
+			<PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 		</ClCompile>
-		<Link>
-			<GenerateDebugInformation>true</GenerateDebugInformation>
-		</Link>
 	</ItemDefinitionGroup>
 
 	<ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
 		<ClCompile>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG</PreprocessorDefinitions>
+			<PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 		</ClCompile>
 		<Link>
@@ -79,17 +69,65 @@
 	</ItemDefinitionGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ChromaPrint{0B96D189-30DC-4732-AB4B-D4C55BBF7BA8}">
-			<Project>{0b96d189-30dc-4732-ab4b-d4c55bbf7ba8}</Project>
-		</ProjectReference>
-	</ItemGroup>
-
-	<ItemGroup>
 		<ClInclude Include="pch.h" />
-		<ClCompile Include="test.cpp" />
+		<ClInclude Include="../config.h" />
 		<ClCompile Include="pch.cpp">
 			<PrecompiledHeader>Create</PrecompiledHeader>
 		</ClCompile>
+		<ClCompile Include="test.cpp" />
+		<ClCompile Include="test_api.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="test_utils.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="test_quantizer.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="test_filter.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="test_filter_utils.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="test_audio_processor.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="test_utils_gaussian_filter.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="..\src\fft_test.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="..\src\audio\audio_slicer_test.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="..\src\utils\base64_test.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="..\src\utils\rolling_integral_image_test.cpp">
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+		</ClCompile>
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\resample2.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fft_lib_kissfft.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\audio_processor.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\chroma.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\chroma_resampler.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\chroma_filter.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\spectrum.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fft.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprinter.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\image_builder.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\simhash.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\silence_remover.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprint_calculator.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprint_compressor.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprint_decompressor.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprinter_configuration.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\fingerprint_matcher.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\base64.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\kiss_fft.obj" />
+		<Object Include="..\src\chromaprint_objs.dir\$(Configuration)\kiss_fftr.obj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -99,7 +137,7 @@
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 
 	<ImportGroup Label="ExtensionTargets">
-		<Import Project="..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
+		<Import Project="..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
 	</ImportGroup>
 
 </Project>
