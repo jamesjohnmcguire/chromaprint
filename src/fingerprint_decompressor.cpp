@@ -21,23 +21,22 @@ FingerprintDecompressor::FingerprintDecompressor()
 
 void FingerprintDecompressor::UnpackBits()
 {
-	int i = 0, last_bit = 0, value = 0;
+	int i = 0, last_bit = 0;
+    uint32_t value = 0;
 	for (size_t j = 0; j < m_bits.size(); j++) {
-		int bit = m_bits[j];
+		const int bit = m_bits[j];
 		if (bit == 0) {
-			m_output[i] = (i > 0) ? value ^ m_output[i - 1] : value;
-			value = 0;
+			m_output[i] = value;
 			last_bit = 0;
 			i++;
-			continue;
+		} else {
+			last_bit += bit;
+			value ^= 1 << (last_bit - 1);
 		}
-		bit += last_bit;
-		last_bit = bit;
-		value |= 1 << (bit - 1);
 	}
 }
 
-bool FingerprintDecompressor::Decompress(const std::string &input)
+bool FingerprintDecompressor::DecompressHeader(const std::string &input)
 {
 	if (input.size() < 4) {
 		DEBUG("FingerprintDecompressor::Decompress() -- Invalid fingerprint (shorter than 4 bytes)");
@@ -46,10 +45,20 @@ bool FingerprintDecompressor::Decompress(const std::string &input)
 
 	m_algorithm = input[0];
 
-	const size_t num_values =
+	m_size =
 		((size_t)((unsigned char)(input[1])) << 16) |
 		((size_t)((unsigned char)(input[2])) <<  8) |
 		((size_t)((unsigned char)(input[3]))      );
+
+	return true;
+}
+
+
+bool FingerprintDecompressor::Decompress(const std::string &input)
+{
+	if (!DecompressHeader(input)) {
+		return false;
+	}
 
 	size_t offset = 4;
 	m_bits.resize(GetUnpackedInt3ArraySize(input.size() - offset));
@@ -59,7 +68,7 @@ bool FingerprintDecompressor::Decompress(const std::string &input)
 	for (size_t i = 0; i < m_bits.size(); i++) {
 		if (m_bits[i] == 0) {
 			found_values += 1;
-			if (found_values == num_values) {
+			if (found_values == m_size) {
 				m_bits.resize(i + 1);
 				break;
 			}
@@ -68,7 +77,7 @@ bool FingerprintDecompressor::Decompress(const std::string &input)
 		}
 	}
 
-	if (found_values != num_values) {
+	if (found_values != m_size) {
 		DEBUG("FingerprintDecompressor::Decompress() -- Invalid fingerprint (too short, not enough input for normal bits)");
 		return false;
 	}
@@ -89,7 +98,7 @@ bool FingerprintDecompressor::Decompress(const std::string &input)
 		}
 	}
 
-	m_output.assign(num_values, -1);
+	m_output.assign(m_size, -1);
 
 	UnpackBits();
 	return true;
