@@ -7,3 +7,6 @@ insert_final_newline = true
 [*.{c,h,cpp,hpp}]
 indent_style = space
 indent_size = 4
+
+[ChromaPrintTestsNew.csproj]
+end_of_line = crlf
