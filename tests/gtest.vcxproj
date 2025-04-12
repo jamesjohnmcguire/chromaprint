@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project
+	DefaultTargets="Build"
+	ToolsVersion="17.0"
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+	<PropertyGroup>
+		<CharacterSet>MultiByte</CharacterSet>
+		<CodeAnalysisRules />
+		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<IntDir>gtest.dir\$(Configuration)\</IntDir>
+		<Keyword>Win32Proj</Keyword>
+		<LinkIncremental>true</LinkIncremental>
+		<OutDir>$(Configuration)\</OutDir>
+		<PlatformToolset>v143</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<ProjectGuid>{12FB1DB9-DE40-34AB-8CBA-0884BB37B516}</ProjectGuid>
+		<ProjectName>gtest</ProjectName>
+		<RootNamespace>TimeTrackerNativeLibrary</RootNamespace>
+		<TargetName>gtest</TargetName>
+		<TargetExt>.lib</TargetExt>
+		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+	<ImportGroup Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>..;..\src;..\src\3rdparty\googletest\googletest\include;..\src\3rdparty\googletest\googletest;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+			<ExceptionHandling>Sync</ExceptionHandling>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<RuntimeTypeInfo>true</RuntimeTypeInfo>
+			<ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+			<UseFullPaths>false</UseFullPaths>
+			<WarningLevel>Level3</WarningLevel>
+		</ClCompile>
+		<ResourceCompile>
+			<AdditionalIncludeDirectories>..;..\src;..\src\3rdparty\googletest\googletest\include;..\src\3rdparty\googletest\googletest;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS</PreprocessorDefinitions>
+		</ResourceCompile>
+		<Lib>
+			<AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+		</Lib>
+		<ProjectReference>
+			<LinkLibraryDependencies>false</LinkLibraryDependencies>
+		</ProjectReference>
+	</ItemDefinitionGroup>
+
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+			<InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+			<Optimization>Disabled</Optimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+		</ResourceCompile>
+	</ItemDefinitionGroup>
+
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+			<Optimization>MaxSpeed</Optimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+		</ResourceCompile>
+	</ItemDefinitionGroup>
+
+	<ItemGroup>
+		<ClCompile Include="..\src\3rdparty\googletest\googletest\src\gtest-all.cc" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ZERO_CHECK.vcxproj">
+			<Project>{0915496B-8989-3901-971A-963754173E0F}</Project>
+			<Name>ZERO_CHECK</Name>
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</ProjectReference>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+
+</Project>

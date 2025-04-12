@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project
+	DefaultTargets="Build"
+	ToolsVersion="17.0"
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+	<PropertyGroup>
+		<CharacterSet>MultiByte</CharacterSet>
+		<ConfigurationType>Utility</ConfigurationType>
+		<IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+		<Keyword>Win32Proj</Keyword>
+		<Platform>x64</Platform>
+		<PlatformToolset>v143</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<ProjectGuid>{0915496B-8989-3901-971A-963754173E0F}</ProjectGuid>
+		<ProjectName>ZERO_CHECK</ProjectName>
+		<ResolveNugetPackages>false</ResolveNugetPackages>
+		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+	<ImportGroup Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+
+	<ItemGroup>
+		<CustomBuild Include="CMakeFiles\7b3980d488dd8978ab54bad6f79ba876\generate.stamp.rule">
+			<UseUtf8Encoding>Always</UseUtf8Encoding>
+			<BuildInParallel>true</BuildInParallel>
+			<Message>Checking Build System</Message>
+			<Command>setlocal
+cmake.exe -S. -B. --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file chromaprint.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+			<AdditionalInputs>CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake;CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake;CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake;CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake;CMakeLists.txt;Doxyfile.cmake;cmake\cmake_uninstall.cmake.in;cmake\modules\FindFFTW3.cmake;cmake\modules\FindFFmpeg.cmake;cmake\modules\FindGTest.cmake;cmake\modules\FindKissFFT.cmake;config.h.in;libchromaprint.pc.cmake;src\CMakeLists.txt;tests\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+			<Outputs>CMakeFiles\generate.stamp;src\CMakeFiles\generate.stamp;tests\CMakeFiles\generate.stamp</Outputs>
+			<LinkObjects>false</LinkObjects>
+		</CustomBuild>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

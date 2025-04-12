@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="chromaprint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chromaprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\resample2.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fft_lib_kissfft.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\audio_processor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\chroma.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\chroma_resampler.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\chroma_filter.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\spectrum.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fft.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprinter.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\image_builder.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\simhash.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\silence_remover.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprint_calculator.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprint_compressor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprint_decompressor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprinter_configuration.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\fingerprint_matcher.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\base64.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\kiss_fft.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="chromaprint_objs.dir\$(Configuration)\kiss_fftr.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A966A93E-A578-306A-AAC3-30C565D2E69E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{5AC7BAB2-9204-3AED-83BD-FF98B89AA21D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{67F58617-8FA9-3A73-91C5-455C603D5CCA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project
+	DefaultTargets="Build"
+	ToolsVersion="17.0"
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+	<PropertyGroup>
+		<CharacterSet>MultiByte</CharacterSet>
+		<CodeAnalysisRules />
+		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+		<ConfigurationType>Application</ConfigurationType>
+		<GenerateManifest>true</GenerateManifest>
+		<IntDir>fpcalc.dir\$(Configuration)\</IntDir>
+		<Keyword>Win32Proj</Keyword>
+		<LinkIncremental>true</LinkIncremental>
+		<OutDir>$(Configuration)\</OutDir>
+		<PlatformToolset>v143</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<ProjectGuid>{DE0E0BB9-13F1-31D6-9503-201D1CC0B096}</ProjectGuid>
+		<ProjectName>fpcalc</ProjectName>
+		<TargetExt>.exe</TargetExt>
+		<TargetName>fpcalc</TargetName>
+		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<LinkIncremental>true</LinkIncremental>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+	<ImportGroup Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>..;../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+			<ExceptionHandling>Sync</ExceptionHandling>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;USE_SWRESAMPLE;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS</PreprocessorDefinitions>
+			<RuntimeTypeInfo>true</RuntimeTypeInfo>
+			<ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+			<UseFullPaths>false</UseFullPaths>
+			<WarningLevel>Level3</WarningLevel>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;</PreprocessorDefinitions>
+		</ResourceCompile>
+		<Midl>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<HeaderFileName>%(Filename).h</HeaderFileName>
+			<InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+			<OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+			<ProxyFileName>%(Filename)_p.c</ProxyFileName>
+			<TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+		</Midl>
+		<Link>
+			<AdditionalDependencies>..\Debug\chromaprint.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>..;../$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+			<ImportLibrary>$(Configuration)/fpcalc.lib</ImportLibrary>
+			<IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+			<ProgramDataBaseFile>$(Configuration)/fpcalc.pdb</ProgramDataBaseFile>
+			<SubSystem>Console</SubSystem>
+		</Link>
+
+		<ProjectReference>
+			<LinkLibraryDependencies>false</LinkLibraryDependencies>
+		</ProjectReference>
+	</ItemDefinitionGroup>
+
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+			<Optimization>Disabled</Optimization>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG;;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+		</ResourceCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+			<Optimization>MaxSpeed</Optimization>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG;;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+		</ResourceCompile>
+	</ItemDefinitionGroup>
+
+	<ItemGroup>
+		<ClCompile Include="fpcalc.cpp" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="ZERO_CHECK.vcxproj">
+			<Project>{0C02624D-63C2-3061-BD7B-9C1A0FBC97EF}</Project>
+			<Name>ZERO_CHECK</Name>
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</ProjectReference>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+		<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+
+</Project>

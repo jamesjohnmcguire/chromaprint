@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project
+	DefaultTargets="Build"
+	ToolsVersion="17.0"
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+	<PropertyGroup>
+		<CharacterSet>MultiByte</CharacterSet>
+		<CodeAnalysisRules />
+		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<IntDir>chromaprint_objs.dir\$(Configuration)\</IntDir>
+		<Keyword>Win32Proj</Keyword>
+		<LinkIncremental>true</LinkIncremental>
+		<OutDir>chromaprint_objs.dir\$(Configuration)\</OutDir>
+		<PlatformToolset>v143</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<ProjectGuid>{E0425213-C05D-35BB-A44E-C1A5CD49F5B2}</ProjectGuid>
+		<ProjectName>chromaprint_objs</ProjectName>
+		<TargetExt>.lib</TargetExt>
+		<TargetName>chromaprint_objs</TargetName>
+		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+	<ImportGroup Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>..;3rdparty\kissfft;3rdparty\kissfft\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+			<ExceptionHandling>Sync</ExceptionHandling>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;__STDC_LIMIT_MACROS;__STDC_CONSTANT_MACROS</PreprocessorDefinitions>
+			<RuntimeTypeInfo>true</RuntimeTypeInfo>
+			<ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+			<UseFullPaths>false</UseFullPaths>
+			<WarningLevel>Level3</WarningLevel>
+		</ClCompile>
+		<Lib>
+			<AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+		</Lib>
+	</ItemDefinitionGroup>
+
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+			<Optimization>Disabled</Optimization>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+		</ClCompile>
+	</ItemDefinitionGroup>
+
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+			<Optimization>MaxSpeed</Optimization>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+		</ClCompile>
+	</ItemDefinitionGroup>
+
+	<ItemGroup>
+		<ClCompile Include="audio_processor.cpp" />
+		<ClCompile Include="avresample\resample2.c" />
+		<ClCompile Include="chroma.cpp" />
+		<ClCompile Include="chroma_filter.cpp" />
+		<ClCompile Include="chroma_resampler.cpp" />
+		<ClCompile Include="fft.cpp" />
+		<ClCompile Include="fft_lib_kissfft.cpp" />
+		<ClCompile Include="fingerprint_calculator.cpp" />
+		<ClCompile Include="fingerprint_compressor.cpp" />
+		<ClCompile Include="fingerprint_decompressor.cpp" />
+		<ClInclude Include="fingerprint_matcher.h" />
+		<ClCompile Include="fingerprint_matcher.cpp" />
+		<ClCompile Include="fingerprinter.cpp" />
+		<ClCompile Include="fingerprinter_configuration.cpp" />
+		<ClCompile Include="image_builder.cpp" />
+		<ClCompile Include="silence_remover.cpp" />
+		<ClInclude Include="simhash.h" />
+		<ClCompile Include="simhash.cpp" />
+		<ClCompile Include="spectrum.cpp" />
+		<ClCompile Include="3rdparty\kissfft\kiss_fft.c" />
+		<ClCompile Include="3rdparty\kissfft\tools\kiss_fftr.c" />
+		<ClInclude Include="audio\audio_slicer.h" />
+		<ClInclude Include="utils\base64.h" />
+		<ClCompile Include="utils\base64.cpp" />
+		<ClInclude Include="utils\gradient.h" />
+		<ClInclude Include="utils\gaussian_filter.h" />
+		<ClInclude Include="utils\scope_exit.h" />
+		<ClInclude Include="utils\rolling_integral_image.h" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ZERO_CHECK.vcxproj">
+			<Project>{0915496B-8989-3901-971A-963754173E0F}</Project>
+			<Name>ZERO_CHECK</Name>
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</ProjectReference>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
