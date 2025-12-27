@@ -118,8 +118,13 @@ inline bool FFmpegAudioReader::SetInputSampleRate(int sample_rate) {
 
 inline bool FFmpegAudioReader::SetInputChannels(int channels) {
 	char buf[64];
-	sprintf(buf, "%d", channels);
-	return av_dict_set(&m_input_opts, "channels", buf, 0) >= 0;
+    if (channels == 1)
+        sprintf(buf, "%s", "mono");
+    else if (channels == 2)
+        sprintf(buf, "%s", "stereo");
+    else
+        sprintf(buf, "%d channels", channels);
+    return av_dict_set(&m_input_opts, "ch_layout", buf, 0) >= 0;
 }
 
 inline bool FFmpegAudioReader::Open(const std::string &file_name) {
@@ -219,10 +224,7 @@ inline void FFmpegAudioReader::Close() {
 
 	m_stream_index = -1;
 
-	if (m_codec_ctx) {
-		avcodec_close(m_codec_ctx);
-		m_codec_ctx = nullptr;
-	}
+	avcodec_free_context(&m_codec_ctx);
 
 	if (m_format_ctx) {
 		avformat_close_input(&m_format_ctx);

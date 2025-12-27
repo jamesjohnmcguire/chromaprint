@@ -37,3 +37,4 @@ src/Debug
 src/Release
 fpcalc
 fpcmp
+build/
