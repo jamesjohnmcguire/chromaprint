@@ -26,7 +26,7 @@
 		<Keyword>Win32Proj</Keyword>
 		<LinkIncremental>true</LinkIncremental>
 		<OutDir>chromaprint_objs.dir\$(Configuration)\</OutDir>
-		<PlatformToolset>v143</PlatformToolset>
+		<PlatformToolset>v145</PlatformToolset>
 		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
 		<ProjectGuid>{E0425213-C05D-35BB-A44E-C1A5CD49F5B2}</ProjectGuid>
 		<ProjectName>chromaprint_objs</ProjectName>

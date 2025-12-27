@@ -22,7 +22,7 @@
 		<ConfigurationType>Application</ConfigurationType>
 		<Keyword>Win32Proj</Keyword>
 		<OutDir>$(SolutionDir)\Bin\$(Configuration)\$(Platform)\</OutDir>
-		<PlatformToolset>v143</PlatformToolset>
+		<PlatformToolset>v145</PlatformToolset>
 		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
 		<ProjectGuid>{e6c35ff8-0236-450e-acd2-581adf0c3eca}</ProjectGuid>
 		<ProjectName>ChromaPrint Tests</ProjectName>

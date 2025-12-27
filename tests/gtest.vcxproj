@@ -26,7 +26,7 @@
 		<Keyword>Win32Proj</Keyword>
 		<LinkIncremental>true</LinkIncremental>
 		<OutDir>$(Configuration)\</OutDir>
-		<PlatformToolset>v143</PlatformToolset>
+		<PlatformToolset>v145</PlatformToolset>
 		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
 		<ProjectGuid>{12FB1DB9-DE40-34AB-8CBA-0884BB37B516}</ProjectGuid>
 		<ProjectName>gtest</ProjectName>
