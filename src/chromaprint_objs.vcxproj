@@ -100,7 +100,7 @@
 		<ClCompile Include="simhash.cpp" />
 		<ClCompile Include="spectrum.cpp" />
 		<ClCompile Include="3rdparty\kissfft\kiss_fft.c" />
-		<ClCompile Include="3rdparty\kissfft\tools\kiss_fftr.c" />
+		<ClCompile Include="3rdparty\kissfft\kiss_fftr.c" />
 		<ClInclude Include="audio\audio_slicer.h" />
 		<ClInclude Include="utils\base64.h" />
 		<ClCompile Include="utils\base64.cpp" />
