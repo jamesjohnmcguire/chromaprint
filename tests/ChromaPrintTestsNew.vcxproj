@@ -20,6 +20,7 @@
 	<PropertyGroup>
 		<CharacterSet>MultiByte</CharacterSet>
 		<ConfigurationType>Application</ConfigurationType>
+		<IsTestProject>true</IsTestProject>
 		<Keyword>Win32Proj</Keyword>
 		<OutDir>$(SolutionDir)\Bin\$(Configuration)\$(Platform)\</OutDir>
 		<PlatformToolset>v145</PlatformToolset>
@@ -34,8 +35,10 @@
 
 	<ItemDefinitionGroup>
 		<ClCompile>
-			<AdditionalIncludeDirectories>..;..\src;.;..\src\3rdparty\googletest\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+			<AdditionalIncludeDirectories>..;..\src;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ConformanceMode>true</ConformanceMode>
+			<LanguageStandard>stdcpp23</LanguageStandard>
+			<LanguageStandard_C>stdc17</LanguageStandard_C>
 			<PrecompiledHeader>Use</PrecompiledHeader>
 			<PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
 			<PreprocessorDefinitions>X64;_CONSOLE;HAVE_CONFIG_H;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -137,7 +140,7 @@
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 
 	<ImportGroup Label="ExtensionTargets">
-		<Import Project="..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
+		<Import Project="..\..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.8\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.8\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
 	</ImportGroup>
 
 </Project>
